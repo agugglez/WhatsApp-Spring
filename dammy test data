@@ -1,0 +1,31 @@
+//     {name:"Louis Litt", avatar:"http://emilcarlsson.se/assets/louislitt.png", 
+//     preview:"You just got LITT up, Mike.", status:"online" },
+
+//     {name:"Harvey Specter", avatar:"http://emilcarlsson.se/assets/harveyspecter.png", 
+//     preview:"Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.", status:"busy" },
+
+//     {name:"Rachel Zane", avatar:"http://emilcarlsson.se/assets/rachelzane.png", 
+//     preview:"I was thinking that we could have chicken tonight, sounds good?", status:"away" },
+
+//     {name:"Donna Paulsen", avatar:"http://emilcarlsson.se/assets/donnapaulsen.png" , 
+//     preview:"Mike, I know everything! I'm Donna..", status:"away" },
+
+//     {name:"Jessica Pearson", avatar:"http://emilcarlsson.se/assets/jessicapearson.png" , 
+//     preview:"Have you finished the draft on the Hinsenburg deal?", status:"busy" },
+
+//     {name:"Harold Gunderson", avatar:"http://emilcarlsson.se/assets/haroldgunderson.png" , 
+//     preview:"Thanks Mike! :)", status:"" },
+
+//     {name:"Daniel Hardman", avatar:"http://emilcarlsson.se/assets/danielhardman.png", 
+//     preview:"We'll meet again, Mike. Tell Jessica I said 'Hi'.", status:"" },
+
+//     {name:"Katrina Bennett", avatar:"http://emilcarlsson.se/assets/katrinabennett.png", 
+//     preview:"I've sent you the files for the Garrett trial.", status:"" },
+
+//     {name:"Charles Forstman", avatar:"http://emilcarlsson.se/assets/charlesforstman.png" , 
+//     preview:"Mike, this isn't over.", status:"" },
+
+//     {name:"Jonathan Sidwell", avatar:"http://emilcarlsson.se/assets/jonathansidwell.png" , 
+//     preview:"That's bullshit. This deal is solid.", status:"" }
+    
+// ]
