@@ -1,6 +1,6 @@
-package com.springchatapp.backend.springchatapp.config;
+package com.springchatapp.backend.config;
 
-import com.springchatapp.backend.springchatapp.utility.CustomHandshakeHandler;
+import com.springchatapp.backend.utility.CustomHandshakeHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;

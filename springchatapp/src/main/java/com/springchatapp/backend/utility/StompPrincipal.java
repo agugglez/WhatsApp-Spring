@@ -1,9 +1,9 @@
-package com.springchatapp.backend.springchatapp.utility;
+package com.springchatapp.backend.utility;
 
 import java.security.Principal;
 
 public class StompPrincipal implements Principal {
-    String name;
+    private String name;
 
     public StompPrincipal(String name) {
         this.name = name;

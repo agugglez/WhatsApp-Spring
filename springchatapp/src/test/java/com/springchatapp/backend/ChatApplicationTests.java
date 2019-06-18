@@ -1,4 +1,4 @@
-package com.springchatapp.backend.springchatapp;
+package com.springchatapp.backend;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

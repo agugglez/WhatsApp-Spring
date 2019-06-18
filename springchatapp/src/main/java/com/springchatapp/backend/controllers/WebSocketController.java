@@ -1,4 +1,4 @@
-package com.springchatapp.backend.springchatapp.controllers;
+package com.springchatapp.backend.controllers;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

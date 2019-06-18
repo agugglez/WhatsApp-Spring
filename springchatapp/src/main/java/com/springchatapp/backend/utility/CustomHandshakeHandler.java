@@ -1,4 +1,4 @@
-package com.springchatapp.backend.springchatapp.utility;
+package com.springchatapp.backend.utility;
 
 import java.security.Principal;
 import java.util.Map;

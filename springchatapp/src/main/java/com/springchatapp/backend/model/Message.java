@@ -1,4 +1,4 @@
-package com.springchatapp.backend.springchatapp.model;
+package com.springchatapp.backend.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,16 +13,16 @@ import javax.persistence.Table;
 
 @Entity(name = "message")
 @Table(name = "messages")
-public class Message{
+public class Message {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "message_id")
-    private int messageID;
+    private long messageID;
 
     @OneToOne()
     @JoinColumn(name = "user_id")
-    private UserProfile from;
+    private UserProfile sender;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "conversation_id")
@@ -31,12 +31,20 @@ public class Message{
     @Column(name = "txt")
     private String txt;
 
-    public UserProfile getFrom() {
-        return from;
+    public long getMessageID() {
+        return messageID;
     }
 
-    public void setFrom(UserProfile from) {
-        this.from = from;
+    public void setMessageID(long messageID) {
+        this.messageID = messageID;
+    }
+
+    public UserProfile getSender() {
+        return sender;
+    }
+
+    public void setSender(UserProfile sender) {
+        this.sender = sender;
     }
 
     public Conversation getConversation() {
@@ -55,5 +63,5 @@ public class Message{
         this.txt = txt;
     }
 
-    
+
 }
