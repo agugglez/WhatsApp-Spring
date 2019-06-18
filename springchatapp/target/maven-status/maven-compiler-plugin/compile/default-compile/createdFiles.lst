@@ -1,0 +1,7 @@
+com/springchatapp/backend/springchatapp/model/Message.class
+com/springchatapp/backend/springchatapp/ChatApplication.class
+com/springchatapp/backend/springchatapp/utility/CustomHandshakeHandler.class
+com/springchatapp/backend/springchatapp/controllers/WebSocketController.class
+com/springchatapp/backend/springchatapp/utility/StompPrincipal.class
+com/springchatapp/backend/springchatapp/config/WebSocketConfigration.class
+com/springchatapp/backend/springchatapp/model/OutputMessage.class
