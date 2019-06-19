@@ -1,6 +1,7 @@
-package com.springchatapp.backend.service;
+package com.springchatapp.backend.service.impl;
 
 import com.springchatapp.backend.model.Message;
+import com.springchatapp.backend.service.IMessageService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

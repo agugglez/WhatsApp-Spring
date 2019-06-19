@@ -13,7 +13,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-
 //@Table(name = "user_profiles")
 public class UserProfile {
 

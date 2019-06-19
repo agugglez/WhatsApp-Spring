@@ -21,7 +21,7 @@ public class Message {
     private long messageID;
 
     @OneToOne()
-    @JoinColumn(name = "user_id")
+    //@JoinColumn(name = "user_id")
     private UserProfile sender;
 
     @ManyToOne(fetch = FetchType.LAZY)
