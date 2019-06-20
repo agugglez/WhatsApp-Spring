@@ -1,5 +1,8 @@
 package com.springchatapp.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,10 +17,11 @@ public class Conversation {
     //@Column(name = "conversation_id")
     private long conversationId;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private Set<UserProfile> members = new HashSet<>();
 
-    @OneToMany(mappedBy = "conversation", cascade = CascadeType.ALL , orphanRemoval = true)
+    @OneToMany(mappedBy = "conversation", cascade = CascadeType.ALL , orphanRemoval = true, fetch = FetchType.EAGER)
+    @JsonManagedReference
     private Set<Message> messages = new HashSet<>();
 
     public Conversation(){
@@ -25,6 +29,7 @@ public class Conversation {
     }
 
     public long getConversationId() {
+
         return conversationId;
     }
 
@@ -33,12 +38,15 @@ public class Conversation {
     }
 
     public Set<Message> getMessages() {
+        messages.forEach(message -> message.setConversationId(conversationId));
         return messages;
     }
 
     public Set<UserProfile> getMembers() {
         return members;
     }
+
+
 
 //    public void setMembers(List<UserProfile> members) {
 //        this.members = members;

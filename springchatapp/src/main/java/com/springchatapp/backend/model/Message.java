@@ -1,31 +1,43 @@
 package com.springchatapp.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import java.util.Arrays;
 
 @Entity(name = "message")
-@Table(name = "messages")
+//@Table(name = "messages")
 public class Message {
+
+    public long getConversationId() {
+        return conversationId;
+    }
+
+    public void setConversationId(long conversationId) {
+        this.conversationId = conversationId;
+    }
+
+    private long conversationId;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "message_id")
     private long messageID;
 
-    @OneToOne()
+    @OneToOne(fetch = FetchType.EAGER)
     //@JoinColumn(name = "user_id")
-    private UserProfile sender;
+    private UserProfile from;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "conversation_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    //@JoinColumn(name = "conversation_id")
+    @JsonBackReference
     private Conversation conversation;
 
     @Column(name = "txt")
@@ -39,20 +51,22 @@ public class Message {
         this.messageID = messageID;
     }
 
-    public UserProfile getSender() {
-        return sender;
+    public UserProfile getFrom() {
+        return from;
     }
 
-    public void setSender(UserProfile sender) {
-        this.sender = sender;
+    public void setFrom(UserProfile from) {
+        this.from = from;
     }
 
     public Conversation getConversation() {
         return conversation;
     }
 
-    public void setConversationID(Conversation conversationID) {
-        this.conversation = conversationID;
+    public void setConversation(Conversation conversation) {
+
+        this.conversation = conversation;
+
     }
 
     public String getTxt() {
@@ -64,4 +78,13 @@ public class Message {
     }
 
 
+    @Override
+    public String toString() {
+        return "Message{" +
+                "conversationId=" + conversationId +
+                ", messageID=" + messageID +
+                ", from=" + from +
+                ", txt='" + txt + '\'' +
+                '}';
+    }
 }

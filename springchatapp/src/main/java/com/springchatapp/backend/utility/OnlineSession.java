@@ -1,17 +1,23 @@
 package com.springchatapp.backend.utility;
 
+import java.util.HashMap;
 import java.util.Map;
 
-import com.springchatapp.backend.model.UserProfile;
+import org.springframework.stereotype.Component;
 
-public class OnlineSession{
-    private Map<UserProfile , String> session;
+@Component
+public class OnlineSession {
+    private Map<Long, String> sessionMap;
 
-    public Map<UserProfile, String> getSession() {
-        return session;
+    public OnlineSession() {
+        this.sessionMap = new HashMap<>();
     }
 
-    public void setSession(Map<UserProfile, String> session) {
-        this.session = session;
+    public Map<Long, String> getSessionMap() {
+        return sessionMap;
+    }
+
+    public void setSessionMap(Map<Long, String> sessionMap) {
+        this.sessionMap = sessionMap;
     }
 }

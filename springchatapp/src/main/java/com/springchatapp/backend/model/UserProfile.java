@@ -1,18 +1,15 @@
 package com.springchatapp.backend.model;
 
+import com.fasterxml.jackson.annotation.*;
+
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "userID")
 //@Table(name = "user_profiles")
 public class UserProfile {
 
@@ -30,8 +27,10 @@ public class UserProfile {
     //@Column(name = "phone_string")
     private String phoneString;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
-    @JoinColumn//(name = "parent_id")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
+    //@JoinColumn(name = "parent_id")
+//    @JsonManagedReference
+//    @JsonBackReference
     private Set<UserProfile> contacts = new HashSet<>();
 
     public String getName() {
