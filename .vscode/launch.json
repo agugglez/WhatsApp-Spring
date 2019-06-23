@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ChatApplication",
+            "request": "launch",
+            "mainClass": "com.springchatapp.backend.ChatApplication",
+            "projectName": "springchatapp"
+        }
+    ]
+}
